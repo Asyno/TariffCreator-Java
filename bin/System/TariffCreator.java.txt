@@ -1,0 +1,559 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+import javax.swing.*;
+
+public class TariffCreator extends JFrame implements ActionListener
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JLabel heading1    = new JLabel(" ");
+	JLabel heading2    = new JLabel("Um den Tarif zu erstellen, geben Sie erst das");
+	JLabel heading3    = new JLabel("von Ihnen vorbereitete Textfile an.");
+	JLabel heading4    = new JLabel("Vergeben Sie anschließend einen Namen und eine ID.");
+	JLabel heading5    = new JLabel(" ");
+	JLabel heading6    = new JLabel(" ");
+	JLabel heading7    = new JLabel(" ");
+	JLabel heading8    = new JLabel("Um einen Tarif auszulesen, geben Sie einfach den      ");
+	JLabel heading9    = new JLabel("Pfad der benötigten Tarif Datei an.");
+	JLabel heading10   = new JLabel(" ");
+	JLabel heading11   = new JLabel(" ");
+	JLabel heading12   = new JLabel(" ");
+	JLabel puffer1     = new JLabel(" ");
+	JLabel puffer2     = new JLabel(" ");
+	JLabel puffer3     = new JLabel(" ");
+	JLabel puffer4     = new JLabel(" ");
+	JLabel puffer5     = new JLabel(" ");
+	JLabel puffer6     = new JLabel(" ");
+	JLabel nameLabel   = new JLabel("Name des Tarifs:");
+	JLabel idLabel     = new JLabel("ID des Tarifs:");
+	JLabel labelIn     = new JLabel("Tarif Datei");
+	JLabel labelOut    = new JLabel("Ausgabe Ordner");
+	JLabel adminLogin  = new JLabel("Admin Login");
+	JButton doit       = new JButton("Start");
+	JButton doit2      = new JButton("Start");
+	JButton search     = new JButton("Durchsuchen");
+	JButton searchIn   = new JButton("Durchsuchen");
+	JButton searchOut  = new JButton("Durchsuchen");
+	JButton random     = new JButton("Random");
+	JButton color      = new JButton("C");
+	JButton color2     = new JButton("C");
+	JButton help       = new JButton("?");
+	JButton login      = new JButton("Tiger Login");
+	JButton loginPass  = new JButton("Login");
+	JButton logout     = new JButton("LogOut");
+	JPasswordField pass= new JPasswordField(10);
+	JPanel headbox     = new JPanel();
+	JPanel headbox2    = new JPanel();
+	JPanel headingBut  = new JPanel();
+	JPanel headingBut2 = new JPanel();
+	JPanel headingAll  = new JPanel();
+	JPanel headingAll2 = new JPanel();
+	JPanel fileIn      = new JPanel();
+	JPanel fileOut     = new JPanel();
+	JPanel file        = new JPanel();
+	JPanel namePanel   = new JPanel();
+	JPanel idPanel     = new JPanel();
+	JPanel butPanel    = new JPanel();
+	JPanel butPanel2   = new JPanel();
+	JPanel mainPanel   = new JPanel();
+	JPanel boxOpt      = new JPanel();
+	JPanel boxOpt2     = new JPanel();
+	JPanel boxMain     = new JPanel();
+	JPanel boxBlanc    = new JPanel();
+	JPanel boxBlanc2   = new JPanel();
+	JPanel passPanel   = new JPanel();
+	JTextField path    = new JTextField(20);
+	JTextField pathIn  = new JTextField(20);
+	JTextField pathOut = new JTextField(20);
+	JTextField name    = new JTextField(17);
+	JTextField id      = new JTextField(10);
+	JRadioButton opt1  = new JRadioButton("Tarif erstellen",false);
+	JRadioButton opt2  = new JRadioButton("Tarif auslesen",false);
+	JRadioButton opt3  = new JRadioButton("Tarif einrichten",false);
+	ButtonGroup opt    = new ButtonGroup();
+	CustomerCreator CCreator = new CustomerCreator();
+	
+	String currFileIn;
+	String currFileOut;
+	String currName;
+	String currID;
+	
+	int n = 0;
+	
+	public TariffCreator()
+	{
+		
+		setTitle ("TariffCreator");
+		getContentPane().setBackground(Color.GRAY);
+		mainPanel.setBackground(Color.GRAY);
+		boxOpt.setBackground(Color.GRAY);
+		boxMain.setBackground(Color.GRAY);
+		boxBlanc.setBackground(Color.GRAY);
+		headingBut.setBackground(Color.GRAY);
+		headingBut2.setBackground(Color.GRAY);
+		headingAll.setBackground(Color.GRAY);
+		headingAll2.setBackground(Color.GRAY);
+		namePanel.setBackground(Color.GRAY);
+		butPanel.setBackground(Color.GRAY);
+		butPanel2.setBackground(Color.GRAY);
+		headbox.setBackground(Color.GRAY);
+		headbox2.setBackground(Color.GRAY);
+		idPanel.setBackground(Color.GRAY);
+		fileIn.setBackground(Color.GRAY);
+		fileOut.setBackground(Color.GRAY);
+		file.setBackground(Color.GRAY);
+		boxBlanc2.setBackground(Color.GRAY);
+		CCreator.main().setBackground(Color.GRAY);
+		
+		help.addActionListener(this);
+		help.setActionCommand("help");
+		color.addActionListener(this);
+		color.setActionCommand("color");
+		color2.addActionListener(this);
+		color2.setActionCommand("color");
+		doit.addActionListener(this);
+		doit.setActionCommand("doit");
+		doit2.addActionListener(this);
+		doit2.setActionCommand("doit2");
+		search.addActionListener(this);
+		search.setActionCommand("searchIn");
+		searchIn.addActionListener(this);
+		searchIn.setActionCommand("searchIn");
+		searchOut.addActionListener(this);
+		searchOut.setActionCommand("searchOut");
+		random.addActionListener(this);
+		random.setActionCommand("random");
+		login.addActionListener(this);
+		login.setActionCommand("login");
+		logout.addActionListener(this);
+		logout.setActionCommand("logout");
+		loginPass.addActionListener(this);
+		loginPass.setActionCommand("loginPass");
+		pass.addActionListener(this);
+		pass.setActionCommand("loginPass");
+		opt1.setActionCommand("opt1");
+		opt1.addActionListener(this);
+		opt2.setActionCommand("opt2");
+		opt2.addActionListener(this);
+		opt3.setActionCommand("opt3");
+		opt3.addActionListener(this);
+		opt.add(opt1);
+		opt.add(opt2);
+		opt.add(opt3);
+		headbox.setLayout( new BoxLayout( headbox, BoxLayout.Y_AXIS ) );
+		headbox2.setLayout( new BoxLayout( headbox2, BoxLayout.Y_AXIS ) );
+		headingBut.setLayout( new BoxLayout( headingBut, BoxLayout.Y_AXIS ) );
+		headingBut2.setLayout( new BoxLayout( headingBut2, BoxLayout.Y_AXIS ) );
+		headbox.add(heading1);
+		headbox.add(heading2);
+		headbox.add(heading3);
+		headbox.add(heading4);
+		headbox.add(heading5);
+		headbox.add(heading6);
+		headingBut.add(help);
+		headingBut.add(color);
+		headingAll.add(headbox);
+		headingAll.add(headingBut);
+		headbox2.add(heading7);
+		headbox2.add(heading8);
+		headbox2.add(heading9);
+		headbox2.add(heading10);
+		headbox2.add(heading11);
+		headbox2.add(heading12);
+		headingBut2.add(color2);
+		headingAll2.add(headbox2);
+		headingAll2.add(headingBut2);
+		file.add(search);
+		file.add(path);
+		fileIn.add(labelIn);
+		fileIn.add(searchIn);
+		fileIn.add(pathIn);
+		fileOut.add(labelOut);
+		fileOut.add(searchOut);
+		fileOut.add(pathOut);
+		namePanel.add(nameLabel);
+		namePanel.add(name);
+		idPanel.add(idLabel);
+		idPanel.add(random);
+		idPanel.add(id);
+		butPanel.add(doit);
+		butPanel2.add(doit2);
+		boxOpt.setLayout(new BoxLayout(boxOpt,BoxLayout.Y_AXIS));
+		boxMain.setLayout(new BoxLayout(boxMain,BoxLayout.Y_AXIS));
+		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+		mainPanel.add(CCreator.main());
+		boxOpt.add(login);
+		boxOpt.add(opt3);
+		boxMain.add(mainPanel);
+		boxMain.add(puffer4);
+		
+		add(puffer5,BorderLayout.NORTH);
+		add(boxOpt,BorderLayout.WEST);
+		add(boxMain,BorderLayout.CENTER);
+		add(boxBlanc,BorderLayout.EAST);
+		add(puffer6,BorderLayout.SOUTH);
+		path.setEditable(false);
+		pathIn.setEditable(false);
+		pathOut.setEditable(false);
+		mainPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	
+	public void actionPerformed(ActionEvent evt)
+	{
+		if (evt.getActionCommand().equals("login"))
+		{
+			mainPanel.removeAll();
+			
+			
+			passPanel.add(adminLogin);
+			passPanel.add(pass);
+			passPanel.add(loginPass);
+			mainPanel.add(passPanel);
+			setSize(981,621);
+			repaint();
+		}
+		
+		if (evt.getActionCommand().equals("logout"))
+		{
+			boxOpt.removeAll();
+			boxOpt.add(login);
+			boxOpt.add(opt3);
+			setSize(981,622);
+			repaint();
+		}
+		
+		if (evt.getActionCommand().equals("loginPass"))
+		{
+			char[] input = pass.getPassword();
+			boolean isCorrect = true;
+		    char[] correctPassword = {'t','i','g','e','r'};
+
+		    if (input.length != correctPassword.length) {
+		        isCorrect = false;
+		    } else {
+		        isCorrect = Arrays.equals (input, correctPassword);
+		    }
+			 
+			if (isCorrect)
+			{
+				boxOpt.removeAll();
+				boxOpt.add(logout);
+				boxOpt.add(opt3);
+				boxOpt.add(opt1);
+				boxOpt.add(opt2);
+				setSize(980,622);
+				repaint();
+			}
+			else
+				JOptionPane.showMessageDialog(null, "The entered Password is not correct!", "Erorr", JOptionPane.ERROR_MESSAGE);
+		}
+		
+		if (evt.getActionCommand().equals("opt1"))
+		{
+			mainPanel.removeAll();
+			
+			mainPanel.add(headingAll);
+			mainPanel.add(fileIn);
+			mainPanel.add(fileOut);
+			mainPanel.add(puffer1);
+			mainPanel.add(puffer2);
+			mainPanel.add(namePanel);
+			mainPanel.add(idPanel);
+			mainPanel.add(puffer3);
+			mainPanel.add(butPanel);
+			setSize(980,620);
+			repaint();
+		}
+		
+		if (evt.getActionCommand().equals("opt2"))
+		{
+			mainPanel.removeAll();
+			
+			mainPanel.setPreferredSize(new Dimension(450,580));
+			mainPanel.add(headingAll2);
+			mainPanel.add(file);
+			mainPanel.add(puffer3);
+			mainPanel.add(butPanel2);
+			setSize(980,621);
+			repaint();
+		}
+		
+		if (evt.getActionCommand().equals("opt3"))
+		{
+			mainPanel.removeAll();
+			
+			mainPanel.add(CCreator.main());
+			setSize(981,620);
+			repaint();
+		}
+		
+		if (evt.getActionCommand().equals("color"))
+		{
+			if (n==6)
+				n=0;
+			
+			if (n == 5)
+			{
+				getContentPane().setBackground(Color.GRAY);
+				mainPanel.setBackground(Color.GRAY);
+				boxOpt.setBackground(Color.GRAY);
+				boxMain.setBackground(Color.GRAY);
+				boxBlanc.setBackground(Color.GRAY);
+				headingBut.setBackground(Color.GRAY);
+				headingAll.setBackground(Color.GRAY);
+				headingBut2.setBackground(Color.GRAY);
+				headingAll2.setBackground(Color.GRAY);
+				namePanel.setBackground(Color.GRAY);
+				butPanel.setBackground(Color.GRAY);
+				butPanel2.setBackground(Color.GRAY);
+				headbox.setBackground(Color.GRAY);
+				headbox2.setBackground(Color.GRAY);
+				idPanel.setBackground(Color.GRAY);
+				fileIn.setBackground(Color.GRAY);
+				fileOut.setBackground(Color.GRAY);
+				file.setBackground(Color.GRAY);
+				boxBlanc2.setBackground(Color.GRAY);
+				CCreator.main().setBackground(Color.GRAY);
+				repaint();
+				n++;
+			}
+			if (n == 4)
+			{
+				getContentPane().setBackground(Color.ORANGE);
+				mainPanel.setBackground(Color.ORANGE);
+				boxOpt.setBackground(Color.ORANGE);
+				boxMain.setBackground(Color.ORANGE);
+				boxBlanc.setBackground(Color.ORANGE);
+				headingBut.setBackground(Color.ORANGE);
+				headingAll.setBackground(Color.ORANGE);
+				headingBut2.setBackground(Color.ORANGE);
+				headingAll2.setBackground(Color.ORANGE);
+				namePanel.setBackground(Color.ORANGE);
+				butPanel.setBackground(Color.ORANGE);
+				butPanel2.setBackground(Color.ORANGE);
+				headbox.setBackground(Color.ORANGE);
+				headbox2.setBackground(Color.ORANGE);
+				idPanel.setBackground(Color.ORANGE);
+				fileIn.setBackground(Color.ORANGE);
+				fileOut.setBackground(Color.ORANGE);
+				file.setBackground(Color.ORANGE);
+				boxBlanc2.setBackground(Color.ORANGE);
+				CCreator.main().setBackground(Color.ORANGE);
+				repaint();
+				n++;
+			}
+			if (n == 3)
+			{
+				getContentPane().setBackground(Color.RED);
+				mainPanel.setBackground(Color.RED);
+				boxOpt.setBackground(Color.RED);
+				boxMain.setBackground(Color.RED);
+				boxBlanc.setBackground(Color.RED);
+				headingBut.setBackground(Color.RED);
+				headingAll.setBackground(Color.RED);
+				headingBut2.setBackground(Color.RED);
+				headingAll2.setBackground(Color.RED);
+				namePanel.setBackground(Color.RED);
+				butPanel.setBackground(Color.RED);
+				butPanel2.setBackground(Color.RED);
+				headbox.setBackground(Color.RED);
+				headbox2.setBackground(Color.RED);
+				idPanel.setBackground(Color.RED);
+				fileIn.setBackground(Color.RED);
+				fileOut.setBackground(Color.RED);
+				file.setBackground(Color.RED);
+				boxBlanc2.setBackground(Color.RED);
+				CCreator.main().setBackground(Color.RED);
+				repaint();
+				n++;
+			}
+			if (n == 2)
+			{
+				getContentPane().setBackground(Color.GREEN);
+				headingBut.setBackground(Color.GREEN);
+				boxOpt.setBackground(Color.GREEN);
+				boxMain.setBackground(Color.GREEN);
+				boxBlanc.setBackground(Color.GREEN);
+				mainPanel.setBackground(Color.GREEN);
+				headingAll.setBackground(Color.GREEN);
+				namePanel.setBackground(Color.GREEN);
+				butPanel.setBackground(Color.GREEN);
+				butPanel2.setBackground(Color.GREEN);
+				headingBut2.setBackground(Color.GREEN);
+				headingAll2.setBackground(Color.GREEN);
+				headbox.setBackground(Color.GREEN);
+				headbox2.setBackground(Color.GREEN);
+				idPanel.setBackground(Color.GREEN);
+				fileIn.setBackground(Color.GREEN);
+				fileOut.setBackground(Color.GREEN);
+				file.setBackground(Color.GREEN);
+				boxBlanc2.setBackground(Color.GREEN);
+				CCreator.main().setBackground(Color.GREEN);
+				repaint();
+				n++;
+			}
+			if (n == 1)
+			{
+				getContentPane().setBackground(Color.YELLOW);
+				headingBut.setBackground(Color.YELLOW);
+				boxOpt.setBackground(Color.YELLOW);
+				boxMain.setBackground(Color.YELLOW);
+				boxBlanc.setBackground(Color.YELLOW);
+				mainPanel.setBackground(Color.YELLOW);
+				headingAll.setBackground(Color.YELLOW);
+				headingAll2.setBackground(Color.YELLOW);
+				headingBut2.setBackground(Color.YELLOW);
+				namePanel.setBackground(Color.YELLOW);
+				butPanel.setBackground(Color.YELLOW);
+				butPanel2.setBackground(Color.YELLOW);
+				headbox.setBackground(Color.YELLOW);
+				headbox2.setBackground(Color.YELLOW);
+				idPanel.setBackground(Color.YELLOW);
+				fileIn.setBackground(Color.YELLOW);
+				fileOut.setBackground(Color.YELLOW);
+				file.setBackground(Color.YELLOW);
+				boxBlanc2.setBackground(Color.YELLOW);
+				CCreator.main().setBackground(Color.YELLOW);
+				repaint();
+				n++;
+			}
+			if (n == 0)
+			{
+				getContentPane().setBackground(Color.BLUE);
+				headingBut.setBackground(Color.BLUE);
+				boxOpt.setBackground(Color.BLUE);
+				boxMain.setBackground(Color.BLUE);
+				boxBlanc.setBackground(Color.BLUE);
+				mainPanel.setBackground(Color.BLUE);
+				headingAll.setBackground(Color.BLUE);
+				headingAll2.setBackground(Color.BLUE);
+				headingBut2.setBackground(Color.BLUE);
+				namePanel.setBackground(Color.BLUE);
+				butPanel.setBackground(Color.BLUE);
+				butPanel2.setBackground(Color.BLUE);
+				headbox.setBackground(Color.BLUE);
+				headbox2.setBackground(Color.BLUE);
+				idPanel.setBackground(Color.BLUE);
+				fileIn.setBackground(Color.BLUE);
+				fileOut.setBackground(Color.BLUE);
+				file.setBackground(Color.BLUE);
+				boxBlanc2.setBackground(Color.BLUE);
+				CCreator.main().setBackground(Color.BLUE);
+				repaint();
+				n++;
+			}
+		}
+		
+		if (evt.getActionCommand().equals("searchIn"))
+		{
+			JFileChooser fc = new JFileChooser();
+			fc.setDialogTitle("Select folder");
+			fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+
+			if(fc.showOpenDialog(null)==JFileChooser.APPROVE_OPTION){}
+			String currFil = fc.getSelectedFile().getAbsolutePath();
+			pathIn.setText(currFil);
+			path.setText(currFil);
+			repaint();
+			currFileIn = currFil;
+		}
+		
+		if (evt.getActionCommand().equals("searchOut"))
+		{
+			JFileChooser fc = new JFileChooser();
+			fc.setDialogTitle("Select folder");
+			fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+			if(fc.showOpenDialog(null)==JFileChooser.APPROVE_OPTION){}
+			String currFil = fc.getSelectedFile().getAbsolutePath();
+			pathOut.setText(currFil);
+			repaint();
+			currFileOut = currFil;
+		}
+		
+		if (evt.getActionCommand().equals("random"))
+		{
+			int n = 0;
+			String idTemp = "";
+			Random rand = new Random();
+			while (n < 4)
+			{
+				idTemp = (rand.nextInt(10)+"" + idTemp);
+				n++;
+			}
+			id.setText(idTemp);
+		}
+		
+		if (evt.getActionCommand().equals("doit"))
+		{
+			try
+			{
+				currName = name.getText();
+				currID   = id.getText();
+				
+				if ((currName.equals(null))||(currName.equals(""))||(currName.equals(" ")))
+					JOptionPane.showMessageDialog(null, "Es wurde kein Name Eingegeben! Bitte prüfen Sie die Eingabe.", "Erorr", JOptionPane.ERROR_MESSAGE);
+				else
+				{
+					if ( (currFileOut.equals(null)) || (currFileOut.equals("")) )
+						JOptionPane.showMessageDialog(null, "Bitte prüfen Sie die Eingabe, es wurde kein Ausgabe Ordner angegeben.", "Erorr", JOptionPane.ERROR_MESSAGE);
+					else
+					{
+						
+						if ((currID.equals(null))||(currID.equals(""))||(isNotNumeric(currID)))
+							JOptionPane.showMessageDialog(null, "Es wurde kein oder eine Falsche ID Eingegeben! Bitte prüfen Sie die Eingabe. Es dürfen nur Zahlen genutzt werden", "Erorr", JOptionPane.ERROR_MESSAGE);
+						else
+							Creator.Create(currFileIn, currFileOut, currName, currID);
+					}
+				}
+			}
+			catch (NullPointerException e)
+	        {
+	        	JOptionPane.showMessageDialog(null, "Es wurde keine kompatible Datei ausgewählt! Bitte prüfen Sie die Datei.", "Erorr", JOptionPane.ERROR_MESSAGE);
+	        }
+		}
+		
+		if (evt.getActionCommand().equals("doit2"))
+		{
+			try
+			{
+				OverviewCreator.create(currFileIn);
+			}
+			catch (NullPointerException e)
+	        {
+	        	JOptionPane.showMessageDialog(null, "Es wurde keine Datei ausgewählt! Bitte prüfen Sie die Datei.", "Erorr", JOptionPane.ERROR_MESSAGE);
+	        }
+		}
+		
+		if (evt.getActionCommand().equals("help"))
+			JOptionPane.showMessageDialog(null, "Das Format für den Tarif muss wie folgt sein: \nPrefix;Name;Preis;SetupCharge(Optional) \n\nAls Beispiel: \n001;USA;100;10 \n\nDie Preise werden immer in Cent angegeben.", "Help", JOptionPane.QUESTION_MESSAGE);
+	}
+	
+	public static boolean isNotNumeric(String str)  
+	{  
+		try  
+			{  
+		    	Double.parseDouble(str);  
+			}  
+		catch(NumberFormatException nfe)  
+			{  
+				return true;  
+			}  
+		return false;
+	}
+	
+	public static void main(String[] args) 
+	{
+		TariffCreator tariffApp = new TariffCreator();
+		
+		tariffApp.setSize(980,620);
+		tariffApp.setVisible(true);
+	}
+}

@@ -1,0 +1,286 @@
+001 | North America
+-
+001340 | United States Virgin Islands
+001670 | Northern Mariana Islands
+001671 | Guam
+001684 | American Samoa
+001787 | Puerto Rico
+001242 | Bahamas
+001246 | Barbados
+001264 | Anguilla
+001268 | Antigua and Barbuda
+001284 | British Virgin Islands
+001345 | Cayman Islands
+001441 | Bermuda
+001473 | Grenada
+001649 | Turks and Caicos Islands
+001664 | Montserrat
+001721 | Sint Maarten
+001758 | Saint Lucia
+001767 | Dominica
+001784 | Saint Vincent and the Grenadines
+001809 | Dominican Republic
+001868 | Trinidad and Tobago
+001869 | Saint Kitts and Nevis
+001876 | Jamaica
+-
+002 | Africa
+-
+0020 | Egypt
+00211 | South Sudan
+00212 | Morocco
+002125288 | Western Sahara
+002125289 | Western Sahara
+00213 | Algeria
+00216 | Tunisia
+00218 | Libya
+00220 | Gambia
+00221 | Senegal
+00222 | Mauritania
+00223 | Mali
+00224 | Guinea
+00225 | Côte d'Ivoire
+00226 | Burkina Faso
+00227 | Niger
+00228 | Togo
+00229 | Benin
+00230 | Mauritius
+00231 | Liberia
+00232 | Sierra Leone
+00233 | Ghana
+00234 | Nigeria
+00235 | Chad
+00236 | Central African Republic
+00237 | Cameroon
+00238 | Cape Verde
+00239 | São Tomé and Príncipe
+00240 | Equatorial Guinea
+00241 | Gabon
+00242 | Republic of the Congo
+00243 | Democratic Republic of the Congo
+00244 | Angola
+00245 | Guinea-Bissau
+00246 | British Indian Ocean Territory
+00247 | Ascension Island
+00248 | Seychelles
+00249 | Sudan
+00250 | Rwanda
+00251 | Ethiopia
+00252 | Somalia
+00253 | Djibouti
+00254 | Kenya
+00255 | Tanzania
+0025524 | Zanzibar
+00256 | Uganda
+00257 | Burundi
+00258 | Mozambique
+00260 | Zambia
+00261 | Madagascar
+00262 | Réunion
+00262269 | Mayotte
+00263 | Zimbabwe
+00264 | Namibia
+00265 | Malawi
+00266 | Lesotho
+00267 | Botswana
+00268 | Swaziland
+00269 | Comoros
+0027 | South Africa
+00290 | Saint Helena
+002908 | Tristan da Cunha
+00291 | Eritrea
+00297 | Aruba
+00298 | Faroe Islands
+00299 | Greenland
+-
+003 | Europe
+-
+0030 | Greece
+0031 | Netherlands
+0032 | Belgium
+0033 | France
+0034 | Spain
+00350 | Gibraltar
+00351 | Portugal
+00352 | Luxembourg
+00353 | Ireland
+00354 | Iceland
+00355 | Albania
+00356 | Malta
+00357 | Cyprus
+00358 | Finland
+0035818 | Åland Islands
+00359 | Bulgaria
+0036 | Hungary
+00370 | Lithuania
+00371 | Lativa
+00372 | Estonia
+00373 | Moldova
+003732 | Transnistria
+00374 | Armenia
+0037447 | Nagorno-Karabakh
+00375 | Belarus
+00376 | Andorra
+00377 | Monaco
+00378 | San Marino
+00379 | Vatican City
+00380 | Ukraine
+00381 | Serbia
+00382 | Montenegro
+00383 | Kosovo
+00385 | Croatia
+00386 | Slovenia
+00387 | Bosnia and Herzegovina
+00389 | Macedonia
+0039 | Italy
+-
+004 | Europe
+-
+0040 | Romania
+0041 | Switzerland
+00420 | Czech Republic
+00421 | Slovakia
+00423 | Liechtenstein
+0043 | Austria
+0044 | UK
+0045 | Denmark
+0046 | Sweden
+0047 | Norway
+0048 | Poland
+0049 | Germany
+-
+005 | South America
+-
+00500 | Falkland Islands
+00501 | Belize
+00502 | Guatemala
+00503 | El Salvador
+00504 | Honduras
+00505 | Nicaragua
+00506 | Costa Rica
+00507 | Panama
+00508 | Saint-Pierre and Miquelon
+00509 | Haiti
+0051 | Peru
+0052 | Mexico
+0053 | Cuba
+0054 | Argentina
+0055 | Brazil
+0056 | Chile
+0057 | Colombia
+0058 | Venezuela
+00590 | Guadeloupe
+00591 | Bolivia
+00592 | Guyana
+00593 | Ecuador
+00594 | French Guiana
+00595 | Paraguay
+00596 | Martinique
+00597 | Suriname
+00598 | Uruguay
+005993 | Sint Eustatius
+005994 | Saba
+005997 | Bonaire
+005999 | Curaçao
+-
+006 | Southeast Asia & Oceania
+-
+0060 | Malaysia
+0061 | Australia
+006189162 | Cocos Islands
+006189164 | Christmas Island
+0062 | Indonesia
+0063 | Philippines
+0064 | New Zealand
+0065 | Singapore
+0066 | Thailand
+00670 | East Timor
+00672 | Australian External Territories
+006721 | Australian Antarctic Territory
+006723 | Norfolk Island
+00673 | Brunei
+00674 | Nauru
+00675 | Papua New Guinea
+00676 | Tonga
+00677 | Solomon Island
+00678 | Vanuatu
+00679 | Fiji
+00680 | Palau
+00681 | Wallis and Futuna
+00682 | Cook Island
+00683 | Niue
+00685 | Samoa
+00686 | Kiribati
+00687 | New Caledonia
+00688 | Tuvalu
+00689 | French Polynesia
+00690 | Tokelau
+00691 | Federated States of Micronesia
+00692 | Marshall Islands
+-
+007 | Russia
+-
+0076 | Kazakhstan
+0077 | Kazakhstan
+007840 | Abkhazia
+007940 | Abkhazia
+-
+008 | East Asia & Special Services
+-
+00800 | International Freephone
+00808 | Shared Cost Services
+0081 | Japan
+0082 | South Korea
+0084 | Vietnam
+00850 | North Korea
+00852 | Hong Kong
+00853 | Macau
+00855 | Cambodia
+00856 | Laos
+0086 | China
+00870 | Inmarsat
+00878 | Universal Personal Telecommunications
+00880 | Bangladesh
+00881 | Global Mobile Satellite System
+00882 | International Networks
+00883 | International Networks
+00886 | Taiwan
+-
+009 | Central, South & Western Asia
+-
+0090 | Turkey
+0090392 | Northern Cyprus
+0091 | India
+0092 | Pakistan
+0093 | Afghanistan
+0094 | Sri Lanka
+0095 | Burama
+00960 | Maldives
+00961 | Lebanon
+00962 | Jordan
+00963 | Syria
+00964 | Iraq
+00965 | Kuwait
+00966 | Saudi Arabia
+00967 | Yemen
+00968 | Oman
+00970 | Palestina
+00971 | United Arab Emirates
+00972 | Israel
+00973 | Bahrain
+00974 | Qatar
+00975 | Bhutan
+00976 | Mongolia
+00977 | Nepal
+00979 | International Premium Rate Service
+0098 | Iran
+00991 | ITPCS
+00992 | Tajikistan
+00993 | Turkmenistan
+00994 | Azerbaijan
+00995 | Georgia
+0099534 | South Ossetia
+0099544 | Abkhazia
+00996 | Kyrgyzstan
+00998 | Uzbekistan
+-
